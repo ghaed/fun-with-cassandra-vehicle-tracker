@@ -35,16 +35,14 @@ public class vehicleTrackerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
-		out.println("<html><head></head><body>");
 		out.println("Hassan's Vehicle Tracker");
 		
 		Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
 		Session session = cluster.connect();
 		String vehicleID = "CA6AFL218";
-		String trackDate = "2014-05-19";
-		String queryString = "SELECT time, latitude, longitude FROM vehicle_tracker.location WHERE vehicle_id = '" + vehicleID + "' AND date= '" + trackDate + "' LIMIT 1";
+		String trackDate = "2014-05-14";
+		String queryString = "SELECT time, latitude, longitude FROM vehicle_tracker.location WHERE vehicle_id = '" + vehicleID + "' AND date= '" + trackDate + "'";
 		ResultSet result = session.execute(queryString);
-		
 		out.println("<table>");
 		for (Row row : result)
 		{
@@ -55,7 +53,7 @@ public class vehicleTrackerServlet extends HttpServlet {
 		   out.println("</tr>");
 		}
 		out.println("</table>");
-		out.println("</body></html>");
+		
 		
 	}
 

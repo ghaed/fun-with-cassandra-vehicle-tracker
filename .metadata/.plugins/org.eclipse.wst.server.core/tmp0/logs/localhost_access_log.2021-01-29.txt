@@ -6,3 +6,8 @@
 127.0.0.1 - - [29/Jan/2021:17:34:21 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
 127.0.0.1 - - [29/Jan/2021:17:47:13 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
 127.0.0.1 - - [29/Jan/2021:17:54:56 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
+127.0.0.1 - - [29/Jan/2021:18:00:23 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 42
+127.0.0.1 - - [29/Jan/2021:18:01:37 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 576
+127.0.0.1 - - [29/Jan/2021:18:01:37 -0800] "GET /favicon.ico HTTP/1.1" 404 973
+127.0.0.1 - - [29/Jan/2021:18:03:55 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 617
+127.0.0.1 - - [29/Jan/2021:18:05:02 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 172

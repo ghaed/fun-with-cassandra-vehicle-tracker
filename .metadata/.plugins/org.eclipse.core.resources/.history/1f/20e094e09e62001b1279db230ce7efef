@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ResultSet;
-import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 
 /**
@@ -34,29 +33,17 @@ public class vehicleTrackerServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();
-		out.println("<html><head></head><body>");
-		out.println("Hassan's Vehicle Tracker");
 		
 		Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
 		Session session = cluster.connect();
 		String vehicleID = "CA6AFL218";
-		String trackDate = "2014-05-19";
-		String queryString = "SELECT time, latitude, longitude FROM vehicle_tracker.location WHERE vehicle_id = '" + vehicleID + "' AND date= '" + trackDate + "' LIMIT 1";
+		String trackDate = "2014-05-14";
+		String queryString = "SELECT time, latitude, longitude FROM vehicle_tracker.location WHERE vehicle_id = '" + vehicleID + "' AND date= '" + trackDate + "'";
 		ResultSet result = session.execute(queryString);
 		
-		out.println("<table>");
-		for (Row row : result)
-		{
-		   out.println("<tr>");
-		   out.println("<td>" + row.getDate("time") + "</td>");
-		   out.println("<td>" + row.getDouble("latitude") + "</td>");
-		   out.println("<td>" + row.getDouble("longitude") + "</td>");   
-		   out.println("</tr>");
-		}
-		out.println("</table>");
-		out.println("</body></html>");
 		
+		PrintWriter out = response.getWriter();
+		out.println("Hassan's Vehicle Tracker");
 	}
 
 }
