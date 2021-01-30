@@ -4,3 +4,5 @@
 127.0.0.1 - - [29/Jan/2021:17:02:46 -0800] "GET /favicon.ico HTTP/1.1" 404 973
 127.0.0.1 - - [29/Jan/2021:17:34:19 -0800] "GET / HTTP/1.1" 404 951
 127.0.0.1 - - [29/Jan/2021:17:34:21 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
+127.0.0.1 - - [29/Jan/2021:17:47:13 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
+127.0.0.1 - - [29/Jan/2021:17:54:56 -0800] "GET /vehicle-tracker/track HTTP/1.1" 200 25
